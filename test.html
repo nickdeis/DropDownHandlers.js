@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="DupDropDownHandler.js"></script>
+	<style>
+	.test{
+		background: none repeat scroll 0% 0% #444;
+		font-size: 15px;
+		color: #FFF;
+		line-height: 1;
+		border: 0;
+		border-radius: 0;
+		height: 20px;	
+	}
+	</style>
+</head>
+<body>
+
+<form id="testform" name="testform" method="get">
+
+	<select id="Duppy" name="duppy" class="test">
+      <option value=""></option>
+	  <option value="opt1">one</option>
+	  <option value="opt2">one</option>
+	  <option value="opt3">two</option>
+	  <option value="opt4">three</option>
+	</select>
+
+	<select id="Unique" name="unique" class="test">
+	  <option value="optuno">uno</option>
+	  <option value="optdos">dos</option>
+	  <option value="opttres">tres</option>
+	  <option value="optquatro">quatro</option>
+	</select>
+	<input type="submit" value="Submit" />	
+</form>
+
+  
+</body>
+<script type="text/javascript">
+var duppy = document.getElementById("Duppy");
+jQuery(duppy).ready(function(){
+	var handler = new DupDropDownHandler(duppy);
+}
+);
+
+//#TODO add document.write test visualizer
+
+
+</script>
+</html>
